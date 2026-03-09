@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica Finanziamento Universitario UK £40k | Italiani a Londra</title>
+    <meta name="description" content="Verifica gratuita: hai diritto a £40.000 di finanziamenti universitari UK. Funziona anche senza maturità e dopo Brexit. Solo per italiani con 3+ anni a Londra.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-navy: #1e3a8a;
+            --primary-blue: #3b82f6;
+            --accent-red: #dc2626;
+            --accent-green: #059669;
+            --italy-green: #009246;
+            --italy-red: #ce2b37;
+            --gold: #f59e0b;
+            --dark: #0f172a;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-600: #475569;
+            --gray-800: #1e293b;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: var(--gray-50);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--primary-navy);
+            text-decoration: none;
+        }
+
+        .logo-flag {
+            width: 32px;
+            height: 24px;
+            background: linear-gradient(to right, var(--italy-green) 33%, white 33%, white 66%, var(--italy-red) 66%);
+            border-radius: 4px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-cta {
+            background: var(--accent-green);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            background: #047857;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 50%, #fff1f2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .hero-badge::before {
+            content: '⚡';
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero h1 .highlight {
+            color: var(--primary-navy);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(220, 38, 38, 0.2);
+            z-index: -1;
+            transform: skewX(-12deg);
+        }
+
+        .hero-subheadline {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .trust-indicators {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .trust-item::before {
+            content: '✓';
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Form Card */
+        .form-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--gray-100);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--italy-green), white, var(--italy-red));
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-header h2 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-header p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            font-size: 0.875rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 1.25rem;
+            height: 1.25rem;
+            accent-color: var(--primary-navy);
+            margin-top: 0.125rem;
+        }
+
+        .checkbox-group label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            line-height: 1.5;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--accent-green) 0%, #047857 100%);
+            color: white;
+            border: none;
+            padding: 1.25rem;
+            border-radius: 12px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(5, 150, 105, 0.3);
+        }
+
+        .submit-btn::after {
+            content: '→';
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .submit-btn:hover::after {
+            transform: translateX(4px);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .lock-icon {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Objections Section */
+        .objections {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .objections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .objection-card {
+            background: var(--gray-50);
+            border: 2px solid var(--gray-100);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .objection-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-green);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .objection-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .objection-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .objection-icon {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .objection-card h3 {
+            font-size: 1.125rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .objection-card p {
+            font-size: 0.95rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* Scam-Proof Section */
+        .scam-proof {
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, #fef2f2, white);
+            border-top: 1px solid #fee2e2;
+        }
+
+        .scam-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .scam-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.25rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .scam-content h2 span {
+            color: var(--accent-red);
+            position: relative;
+        }
+
+        .scam-content p {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .scam-list {
+            list-style: none;
+            space-y: 1rem;
+        }
+
+        .scam-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .scam-list li::before {
+            content: '✓';
+            width: 24px;
+            height: 24px;
+            background: var(--accent-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+
+        .scam-visual {
+            background: white;
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-xl);
+            text-align: center;
+            border: 2px solid var(--gray-100);
+            position: relative;
+        }
+
+        .scam-visual::after {
+            content: 'SFE';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: var(--primary-navy);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.875rem;
+            border: 4px solid white;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .shield-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 5rem 2rem;
+            background: var(--gray-50);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-navy);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.25rem;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-card:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 3rem;
+            right: -2rem;
+            width: 2rem;
+            height: 2px;
+            background: var(--gray-300);
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .step-card:not(:last-child)::after {
+                display: block;
+            }
+        }
+
+        .step-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .step-card p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            border: 2px solid var(--gray-100);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--gray-200);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: white;
+            border: none;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: var(--gray-50);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            padding: 1.5rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #1e40af 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .final-cta p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .cta-button-large {
+            display: inline-block;
+            background: var(--accent-green);
+            color: white;
+            padding: 1.25rem 3rem;
+            border-radius: 9999px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px -5px rgba(5, 150, 105, 0.4);
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .cta-button-large:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 20px 40px -5px rgba(5, 150, 105, 0.5);
+            background: #047857;
+        }
+
+        .guarantee-text {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--gray-400);
+        }
+
+        .footer-links {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .scam-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .scam-visual::after {
+                display: none;
+            }
+
+            .step-card:not(:last-child)::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.875rem;
+            }
+
+            .form-card {
+                padding: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.875rem;
+            }
+
+            .objections-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sticky CTA Mobile */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            z-index: 999;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        @media (max-width: 968px) {
+            .sticky-cta {
+                display: block;
+            }
+
+            .hero {
+                padding-bottom: 6rem;
+            }
+
+            footer {
+                padding-bottom: 6rem;
+            }
+        }
+
+        .sticky-cta button {
+            width: 100%;
+            background: var(--accent-green);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        /* Urgency Bar */
+        .urgency-bar {
+            background: linear-gradient(to right, #fef3c7, #fde68a);
+            border-bottom: 1px solid #f59e0b;
+            padding: 0.75rem;
+            text-align: center;
+            font-weight: 600;
+            color: #92400e;
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .urgency-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Urgency Bar -->
+    <div class="urgency-bar" style="margin-top: 60px;">
+        🔥 Richieste in aumento: oltre 200 italiani hanno verificato il loro diritto questa settimana
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-flag"></div>
+                <span>Student Finance Italia</span>
+            </a>
+            <a href="#form" class="nav-cta">Verifica Ora →</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">100% Gratuito e Senza Impegno</div>
+                <h1>
+                    Verifica Gratuita: Hai diritto a <span class="highlight">£40k</span> di finanziamenti universitari UK
+                    <span style="display: block; font-size: 0.8em; margin-top: 0.5rem; color: var(--gray-600); font-family: 'Inter', sans-serif;">(anche senza diploma, anche dopo Brexit)</span>
+                </h1>
+                <p class="hero-subheadline">
+                    <strong>Nessun costo nascosto.</strong> Non serve la maturità. Non serve pagare di tasca tua. Non devi fare domande complicate. <span style="background: linear-gradient(120deg, transparent 0%, #fef08a 0%, #fef08a 100%, transparent 100%); background-repeat: no-repeat; background-size: 100% 40%; background-position: 0 80%;">Serve solo essere italiani con 3+ anni a Londra.</span>
+                </p>
+                
+                <div class="trust-indicators">
+                    <div class="trust-item">Verifica 2 minuti</div>
+                    <div class="trust-item">Zero costi nascosti</div>
+                    <div class="trust-item">Supporto in italiano</div>
+                </div>
+            </div>
+
+            <div class="form-card" id="form">
+                <div class="form-header">
+                    <h2>Verifica la tua idoneità</h2>
+                    <p>Compila il form per scoprire se hai diritto ai £40.000</p>
+                </div>
+                
+                <form onsubmit="event.preventDefault(); alert('Grazie! Ti contatteremo entro 24h con la verifica del tuo diritto.');">
+                    <div class="form-group">
+                        <label class="form-label">Nome completo</label>
+                        <input type="text" class="form-input" placeholder="Mario Rossi" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="mario@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Telefono (UK)</label>
+                        <input type="tel" class="form-input" placeholder="07XXX XXXXXX" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Da quanto tempo vivi nel UK?</label>
+                        <select class="form-input form-select" required>
+                            <option value="">Seleziona...</option>
+                            <option value="3-5">3-5 anni</option>
+                            <option value="5-10">5-10 anni</option>
+                            <option value="10+">Più di 10 anni</option>
+                            <option value="less3">Meno di 3 anni</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Hai il Pre-Settled o Settled Status?</label>
+                        <select class="form-input form-select" required>
+                            <option value="">Seleziona...</option>
+                            <option value="presettled">Pre-Settled Status</option>
+                            <option value="settled">Settled Status</option>
+                            <option value="applied">Ho fatto domanda, in attesa</option>
+                            <option value="none">Non ancora</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="privacy" required>
+                        <label for="privacy">Accetto la privacy policy e autorizzo il trattamento dei dati per verificare la mia idoneità ai finanziamenti UK.</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Verifica Gratuita Ora
+                    </button>
+
+                    <div class="form-footer">
+                        <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        I tuoi dati sono protetti e mai condivisi con terzi
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objections Handling -->
+    <section class="objections">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tutto quello che ti hanno detto di falso sullo studio nel UK</h2>
+                <p>Ecco perché quasi TUTTI gli italiani a Londra hanno diritto a questi fondi, ma non lo sanno</p>
+            </div>
+
+            <div class="objections-grid">
+                <div class="objection-card">
+                    <div class="objection-icon">🎓</div>
+                    <h3>Funziona anche SENZA la maturità</h3>
+                    <p>Entry per <strong>mature students</strong> con esperienza lavorativa. Il tuo CV conta più di un pezzo di carta. Corsi di accesso disponibili per tutti.</p>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-icon">💰</div>
+                    <h3>Finanziamento copre TUTTO</h3>
+                    <p>Tasse universitarie <strong>+ vitto + alloggio</strong>. Zero anticipo richiesto. Ricevi il pagamento direttamente sul tuo conto UK.</p>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-icon">🇪🇺</div>
+                    <h3>Valido dopo Brexit</h3>
+                    <p>Chi ha <strong>Pre-Settled o Settled Status</strong> ha gli stessi diritti degli studenti inglesi. Non sei un "overseas student".</p>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-icon">⏰</div>
+                    <h3>Fattibile con lavoro FULL-TIME</h3>
+                    <p>Opzioni serali e weekend disponibili. Corsi part-time e blended learning. <strong>Non devi mollare il lavoro</strong> per studiare.</p>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-icon">🗣️</div>
+                    <h3>Inglese base sufficiente</h3>
+                    <p>Il <strong>foundation year</strong> include supporto linguistico completo. Molti corsi accettano IELTS 5.5 o equivalenti.</p>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-icon">📝</div>
+                    <h3>Zero burocrazia</h3>
+                    <p>I nostri partner fanno <strong>tutta l'applicazione per te</strong> in italiano. Ti guidiamo passo dopo passo fino all'approvazione.</p>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-icon">🔄</div>
+                    <h3>Impegno annuale</h3>
+                    <p>Decidi ogni anno se continuare. <strong>Nessun contratto pluriennale</strong> vincolante. Flessibilità totale sul tuo percorso.</p>
+                </div>
+
+                <div class="objection-card" style="border-color: var(--accent-green); background: #ecfdf5;">
+                    <div class="objection-icon">✅</div>
+                    <h3>Non è una truffa</h3>
+                    <p><strong>Siamo italiani come te</strong>, non agenzia sospetta. Controlli tutto direttamente con Student Finance England. Trasparenza totale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scam Proof Section -->
+    <section class="scam-proof">
+        <div class="scam-container">
+            <div class="scam-content">
+                <h2>Perché fidarsi? <span>Non siamo un'agenzia.</span></h2>
+                <p>Sappiamo che nel mercato UK circolano tante truffe sui "loan schemes". Ecco perché il nostro approccio è diverso:</p>
+                
+                <ul class="scam-list">
+                    <li>Non chiediamo soldi anticipati</li>
+                    <li>Non tocchiamo i tuoi fondi: pagamento diretto SFE → Università → Te</li>
+                    <li>Tutti i documenti sono firmati da te direttamente con il governo UK</li>
+                    <li>Verifica ufficiale tramite portale GOV.UK</li>
+                    <li>Supporto in italiano ma procedure 100% ufficiali inglesi</li>
+                </ul>
+            </div>
+            
+            <div class="scam-visual">
+                <div class="shield-icon">🛡️</div>
+                <h3>Verifica Ufficiale</h3>
+                <p style="margin-top: 1rem; color: var(--gray-600);">Tutte le pratiche passano attraverso il sistema ufficiale</p>
+                <div style="margin-top: 2rem; padding: 1rem; background: var(--gray-50); border-radius: 12px; font-size: 0.9rem;">
+                    <strong>Student Finance England</strong><br>
+                    <span style="color: var(--gray-500);">Governo Britannico</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Come funziona in 3 passaggi</h2>
+                <p>Dalla verifica al primo pagamento in meno di 30 giorni</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Verifica Gratuita</h3>
+                    <p>Compili il form qui sopra. Controlliamo la tua idoneità basandoci sui tuoi anni nel UK e sullo status di residenza.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Consulenza Personalizzata</h3>
+                    <p>Un consulente italiano ti chiama (senza impegno) per spiegarti le opzioni di corso e il montante esatto a cui hai diritto.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Applichiamo Insieme</h3>
+                    <p>Ti guidiamo nella domanda ufficiale a Student Finance England. I primi fondi arrivano sul tuo conto entro 3-4 settimane.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Domande frequenti</h2>
+                <p>Tutto quello che devi sapere prima di iniziare</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">Devo restituire i soldi se non trovo lavoro dopo?</button>
+                    <div class="faq-answer">
+                        <p>No, il sistema inglese funziona così: inizi a ripagare solo quando guadagni oltre £25.000 all'anno. Se il tuo stipendio è sotto questa soglia, non paghi nulla. Dopo 30 anni il debito viene cancellato.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Cosa succede se ho solo il Pre-Settled Status?</button>
+                    <div class="faq-answer">
+                        <p>Il Pre-Settled Status (stato pre-insediato) ti dà gli stessi diritti del Settled Status per quanto riguarda i finanziamenti universitari. L'importante è aver vissuto nel UK per almeno 3 anni prima dell'inizio del corso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Posso lavorare full-time mentre studio?</button>
+                    <div class="faq-answer">
+                        <p>Assolutamente sì. Esistono corsi part-time, serali e weekend. Inoltre, con il Maintenance Loan ricevi abbastanza per coprire le spese, quindi puoi anche ridurre le ore di lavoro se vuoi concentrarti sugli studi.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Quali corsi posso fare?</button>
+                    <div class="faq-answer">
+                        <p>Quasi tutti i corsi undergraduate (prima laurea) e alcuni postgraduate (master) sono finanziabili. Include: Business, IT, Nursing, Ingegneria, Psicologia, e molti altri. Escludiamo solo i corsi privati non accreditati.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Devo pagare tasse in Italia su questi fondi?</button>
+                    <div class="faq-answer">
+                        <p>No, il Maintenance Loan e il Tuition Fee Loan non sono reddito tassabile. Sono fondi a scopo di studio erogati dal governo britannico e non vanno dichiarati in Italia come reddito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Non lasciare che £40.000 vadano persi</h2>
+        <p>Ogni anno migliaia di italiani a Londra rinunciano a questi diritti semplicemente perché non sanno di averli. Verifica subito la tua idoneità, gratis e senza impegno.</p>
+        <a href="#form" class="cta-button-large">Verifica se hai diritto →</a>
+        <div class="guarantee-text">
+            <span>🔒</span> Verifica gratuita - Nessun costo nascosto - Annullabile in qualsiasi momento
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Termini di Servizio</a>
+            <a href="#">Contattaci</a>
+            <a href="#">Student Finance England Ufficiale</a>
+        </div>
+        <p>© 2024 Student Finance Italia. Tutti i diritti riservati.<br>
+        <small>Questo sito non è affiliato al governo britannico, ma fornisce assistenza gratuita agli italiani residenti nel UK per accedere ai fondi pubblici ufficiali.</small></p>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta">
+        <button onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'})">
+            Verifica Gratis Ora →
+        </button>
+    </div>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked if wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
