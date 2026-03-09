@@ -3,63 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verifica Finanziamento Universitario UK £40k | Italiani a Londra</title>
-    <meta name="description" content="Verifica gratuita: hai diritto a £40.000 di finanziamenti universitari UK. Funziona anche senza maturità e dopo Brexit. Solo per italiani con 3+ anni a Londra.">
-    
-    <!-- Fonts -->
+    <title>Finanziamenti Universitari UK per Italiani | Verifica Gratuita</title>
+    <meta name="description" content="Scopri se hai diritto a fino a £40.000 di finanziamenti universitari nel Regno Unito. Gratuito, senza impegno, supporto in italiano.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary-navy: #1e3a8a;
-            --primary-blue: #3b82f6;
-            --accent-red: #dc2626;
-            --accent-green: #059669;
-            --italy-green: #009246;
-            --italy-red: #ce2b37;
-            --gold: #f59e0b;
-            --dark: #0f172a;
-            --gray-50: #f8fafc;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-600: #475569;
-            --gray-800: #1e293b;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            --inchiostro: #09090f;
+            --navy: #0e1d47;
+            --navy-medio: #183170;
+            --oro: #c19a40;
+            --oro-chiaro: #e2b96a;
+            --oro-pallido: #fdf8ee;
+            --crema: #faf8f4;
+            --bianco: #ffffff;
+            --grigio-1: #f3f2ef;
+            --grigio-2: #e3e1db;
+            --grigio-3: #b0ada7;
+            --grigio-4: #757168;
+            --grigio-5: #46443f;
+            --verde: #186640;
+            --verde-chiaro: #1e8550;
+            --rosso: #b81c24;
+            --it-verde: #009246;
+            --it-rosso: #ce2b37;
+            --serif: 'DM Serif Display', Georgia, serif;
+            --sans: 'Figtree', system-ui, sans-serif;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--gray-800);
-            background: var(--gray-50);
+            font-family: var(--sans);
+            background: var(--crema);
+            color: var(--inchiostro);
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation */
+        /* BARRA SUPERIORE */
+        .barra-top {
+            background: var(--navy);
+            color: rgba(255,255,255,0.75);
+            text-align: center;
+            padding: 0.6rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            border-bottom: 1px solid rgba(193,154,64,0.25);
+        }
+        .barra-top strong { color: var(--oro-chiaro); }
+
+        /* NAVIGAZIONE */
         .nav {
-            position: fixed;
+            position: sticky;
             top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--gray-200);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
+            background: rgba(250,248,244,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--grigio-2);
+            z-index: 100;
+            padding: 0.85rem 0;
+            transition: box-shadow 0.3s;
         }
-
-        .nav-container {
+        .nav.con-ombra { box-shadow: 0 2px 20px rgba(0,0,0,0.07); }
+        .nav-interno {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
@@ -67,1176 +78,1272 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-weight: 800;
-            font-size: 1.25rem;
-            color: var(--primary-navy);
+            gap: 0.55rem;
             text-decoration: none;
         }
-
-        .logo-flag {
-            width: 32px;
-            height: 24px;
-            background: linear-gradient(to right, var(--italy-green) 33%, white 33%, white 66%, var(--italy-red) 66%);
-            border-radius: 4px;
-            box-shadow: var(--shadow-sm);
+        .bandiera {
+            width: 28px; height: 20px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--it-verde) 33.3%, white 33.3%, white 66.6%, var(--it-rosso) 66.6%);
+            border: 1px solid var(--grigio-2);
+            flex-shrink: 0;
         }
-
+        .logo-nome {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: -0.01em;
+        }
         .nav-cta {
-            background: var(--accent-green);
+            background: var(--verde);
             color: white;
-            padding: 0.5rem 1.25rem;
-            border-radius: 9999px;
-            font-weight: 600;
+            padding: 0.5rem 1.35rem;
+            border-radius: 100px;
+            font-weight: 700;
             font-size: 0.875rem;
             text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            transition: background 0.2s, transform 0.2s;
         }
+        .nav-cta:hover { background: var(--verde-chiaro); transform: translateY(-1px); }
 
-        .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-            background: #047857;
-        }
-
-        /* Hero Section */
+        /* HERO */
         .hero {
-            padding: 8rem 2rem 4rem;
-            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 50%, #fff1f2 100%);
+            background: var(--navy);
+            color: white;
+            padding: 5.5rem 2rem 0;
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(ellipse 700px 500px at 85% -5%, rgba(193,154,64,0.14) 0%, transparent 65%),
+                radial-gradient(ellipse 400px 400px at 5% 105%, rgba(14,29,71,0.7) 0%, transparent 60%);
+            pointer-events: none;
         }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
+        .hero::after {
+            content: '';
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 64px 64px;
+            pointer-events: none;
         }
-
-        .hero-container {
+        .hero-interno {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            grid-template-columns: 1fr 440px;
+            gap: 5rem;
+            align-items: end;
             position: relative;
             z-index: 1;
         }
-
-        .hero-badge {
+        .hero-etichetta {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: white;
-            border: 2px solid var(--gold);
-            color: var(--gold);
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            font-weight: 700;
-            font-size: 0.875rem;
-            margin-bottom: 1.5rem;
-            box-shadow: var(--shadow-sm);
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-
-        .hero-badge::before {
-            content: '⚡';
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            line-height: 1.1;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
+            border: 1px solid rgba(193,154,64,0.45);
+            color: var(--oro-chiaro);
+            padding: 0.38rem 1rem;
+            border-radius: 100px;
+            font-size: 0.775rem;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            margin-bottom: 1.75rem;
+            background: rgba(193,154,64,0.07);
         }
-
-        .hero h1 .highlight {
-            color: var(--primary-navy);
-            position: relative;
-            display: inline-block;
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.5rem, 4.8vw, 4rem);
+            line-height: 1.1;
+            font-weight: 400;
+            margin-bottom: 1.75rem;
+            color: white;
         }
-
-        .hero h1 .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 8px;
-            background: rgba(220, 38, 38, 0.2);
-            z-index: -1;
-            transform: skewX(-12deg);
+        .hero h1 em { color: var(--oro-chiaro); font-style: italic; }
+        .hero-sottotitolo {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.8;
+            max-width: 510px;
+            margin-bottom: 2.25rem;
+            font-weight: 300;
         }
-
-        .hero-subheadline {
-            font-size: 1.25rem;
-            color: var(--gray-600);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            max-width: 90%;
-        }
-
-        .trust-indicators {
+        .hero-sottotitolo strong { color: white; font-weight: 600; }
+        .hero-prova {
             display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 2.25rem;
             flex-wrap: wrap;
+            padding-bottom: 4rem;
         }
-
-        .trust-item {
+        .hero-prova-voce {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 0.875rem;
-            color: var(--gray-600);
+            gap: 0.55rem;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.55);
             font-weight: 500;
         }
-
-        .trust-item::before {
-            content: '✓';
-            color: var(--accent-green);
-            font-weight: bold;
-            font-size: 1.2rem;
+        .hero-prova-voce .pallino {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--oro);
+            flex-shrink: 0;
         }
 
-        /* Form Card */
-        .form-card {
+        /* MODULO */
+        .modulo-wrapper { position: relative; z-index: 2; }
+        .modulo-card {
             background: white;
-            padding: 2.5rem;
-            border-radius: 24px;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid var(--gray-100);
+            border-radius: 20px 20px 0 0;
+            padding: 2.25rem 2rem 2.75rem;
+            box-shadow: 0 -10px 60px rgba(0,0,0,0.28);
             position: relative;
             overflow: hidden;
         }
-
-        .form-card::before {
+        .modulo-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(to right, var(--italy-green), white, var(--italy-red));
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--it-verde) 33.3%, white 33.3%, white 66.6%, var(--it-rosso) 66.6%);
         }
-
-        .form-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .form-header h2 {
-            font-size: 1.5rem;
-            color: var(--dark);
+        .modulo-soprattitolo {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--verde);
             margin-bottom: 0.5rem;
         }
-
-        .form-header p {
-            color: var(--gray-600);
-            font-size: 0.95rem;
+        .modulo-card h2 {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            color: var(--inchiostro);
+            line-height: 1.2;
+            margin-bottom: 0.35rem;
         }
-
-        .form-group {
-            margin-bottom: 1.25rem;
+        .modulo-desc {
+            font-size: 0.84rem;
+            color: var(--grigio-4);
+            margin-bottom: 1.5rem;
         }
-
-        .form-label {
+        .campo { margin-bottom: 0.9rem; }
+        .campo label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--gray-800);
-            font-size: 0.875rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--grigio-5);
+            margin-bottom: 0.38rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
         }
-
-        .form-input {
+        .campo input,
+        .campo select {
             width: 100%;
-            padding: 0.875rem 1rem;
-            border: 2px solid var(--gray-200);
-            border-radius: 12px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            font-family: inherit;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-
-        .form-select {
+            padding: 0.78rem 1rem;
+            border: 1.5px solid var(--grigio-2);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: var(--sans);
+            color: var(--inchiostro);
+            background: var(--grigio-1);
+            transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
             appearance: none;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-            background-position: right 0.5rem center;
-            background-repeat: no-repeat;
-            background-size: 1.5em 1.5em;
         }
-
-        .checkbox-group {
+        .campo input:focus,
+        .campo select:focus {
+            outline: none;
+            border-color: var(--navy-medio);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(14,29,71,0.07);
+        }
+        .campo select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23757168'%3e%3cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.8rem center;
+            background-size: 1.1em;
+            padding-right: 2.5rem;
+        }
+        .campi-doppi {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+        .consenso {
             display: flex;
             align-items: flex-start;
-            gap: 0.75rem;
-            margin: 1.5rem 0;
+            gap: 0.6rem;
+            margin: 1.1rem 0 1.4rem;
         }
-
-        .checkbox-group input[type="checkbox"] {
-            width: 1.25rem;
-            height: 1.25rem;
-            accent-color: var(--primary-navy);
-            margin-top: 0.125rem;
+        .consenso input[type="checkbox"] {
+            width: 15px; height: 15px;
+            margin-top: 2px;
+            accent-color: var(--navy);
+            flex-shrink: 0;
         }
-
-        .checkbox-group label {
-            font-size: 0.875rem;
-            color: var(--gray-600);
-            line-height: 1.5;
+        .consenso label {
+            font-size: 0.76rem;
+            color: var(--grigio-4);
+            line-height: 1.55;
         }
-
-        .submit-btn {
+        .consenso a { color: var(--navy-medio); text-decoration: underline; }
+        .pulsante-invio {
             width: 100%;
-            background: linear-gradient(135deg, var(--accent-green) 0%, #047857 100%);
+            background: var(--verde);
             color: white;
             border: none;
-            padding: 1.25rem;
+            padding: 1rem 1.5rem;
             border-radius: 12px;
-            font-size: 1.125rem;
+            font-size: 1rem;
             font-weight: 700;
+            font-family: var(--sans);
             cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px rgba(5, 150, 105, 0.3);
-        }
-
-        .submit-btn::after {
-            content: '→';
-            margin-left: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .submit-btn:hover::after {
-            transform: translateX(4px);
-        }
-
-        .form-footer {
-            text-align: center;
-            margin-top: 1.5rem;
-            font-size: 0.75rem;
-            color: var(--gray-600);
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
         }
-
-        .lock-icon {
-            width: 12px;
-            height: 12px;
+        .pulsante-invio:hover {
+            background: var(--verde-chiaro);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(24,102,64,0.28);
         }
-
-        /* Objections Section */
-        .objections {
-            padding: 5rem 2rem;
-            background: white;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            font-size: 1.25rem;
-            color: var(--gray-600);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .objections-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .objection-card {
-            background: var(--gray-50);
-            border: 2px solid var(--gray-100);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .objection-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--accent-green);
-            transform: scaleY(0);
-            transition: transform 0.3s ease;
-        }
-
-        .objection-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--primary-blue);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .objection-card:hover::before {
-            transform: scaleY(1);
-        }
-
-        .objection-icon {
-            width: 48px;
-            height: 48px;
-            background: white;
-            border-radius: 12px;
+        .pulsante-invio .freccia { transition: transform 0.2s; }
+        .pulsante-invio:hover .freccia { transform: translateX(4px); }
+        .modulo-garanzia {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            box-shadow: var(--shadow-sm);
+            gap: 0.4rem;
+            margin-top: 1rem;
+            font-size: 0.71rem;
+            color: var(--grigio-3);
+            text-align: center;
         }
 
-        .objection-card h3 {
-            font-size: 1.125rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
+        /* CIFRE */
+        .cifre {
+            background: var(--oro-pallido);
+            border-top: 1px solid rgba(193,154,64,0.18);
+            border-bottom: 1px solid rgba(193,154,64,0.18);
+            padding: 2.5rem 2rem;
+        }
+        .cifre-interno {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+        .cifra-valore {
+            font-family: var(--serif);
+            font-size: 2.3rem;
+            color: var(--navy);
+            line-height: 1;
+            margin-bottom: 0.35rem;
+        }
+        .cifra-valore em { color: var(--oro); font-style: normal; }
+        .cifra-etichetta {
+            font-size: 0.79rem;
+            color: var(--grigio-4);
+            font-weight: 500;
+            line-height: 1.45;
+        }
+
+        /* UTILITÀ COMUNI */
+        .testo-centro { text-align: center; }
+        .soprattitolo {
+            display: inline-block;
+            font-size: 0.73rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--oro);
+            margin-bottom: 1rem;
+        }
+        .titolo-sezione {
+            font-family: var(--serif);
+            font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+            color: var(--inchiostro);
+            line-height: 1.15;
+            margin-bottom: 1.1rem;
+        }
+        .titolo-sezione em { color: var(--rosso); font-style: italic; }
+        .titolo-sezione.chiaro { color: white; }
+        .sottotitolo-sezione {
+            font-size: 1.05rem;
+            color: var(--grigio-4);
+            max-width: 560px;
+            margin: 0 auto 3.5rem;
+            line-height: 1.75;
+            font-weight: 300;
+        }
+        .sottotitolo-sezione.chiaro { color: rgba(255,255,255,0.55); }
+
+        /* SEZIONE PROBLEMA */
+        .problema { padding: 6rem 2rem; background: white; }
+        .griglia-problema {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: var(--grigio-2);
+            border: 1px solid var(--grigio-2);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .voce-problema {
+            background: white;
+            padding: 1.85rem 2.25rem;
+        }
+        .voce-problema::before {
+            content: attr(data-icona);
+            font-size: 1.4rem;
+            display: block;
+            margin-bottom: 0.7rem;
+        }
+        .voce-problema h3 {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            color: var(--inchiostro);
+            margin-bottom: 0.45rem;
+        }
+        .voce-problema p { font-size: 0.875rem; color: var(--grigio-4); line-height: 1.65; }
+        .voce-problema.risolto { background: #f0fdf7; }
+        .voce-problema.risolto h3 { color: var(--verde); }
+        .badge-risolto {
+            display: inline-block;
+            background: var(--verde);
+            color: white;
+            font-size: 0.62rem;
+            font-weight: 700;
+            padding: 0.18rem 0.55rem;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
         }
 
-        .objection-card p {
-            font-size: 0.95rem;
-            color: var(--gray-600);
-            line-height: 1.6;
+        /* PACCHETTO VALORE */
+        .pacchetto {
+            background: var(--navy);
+            color: white;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .pacchetto::before {
+            content: '';
+            position: absolute;
+            top: -180px; right: -180px;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(193,154,64,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .pacchetto-interno { max-width: 860px; margin: 0 auto; position: relative; }
+        .voci-stack {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        .voce-stack {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            padding: 1.4rem 1.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            background: rgba(255,255,255,0.02);
+            transition: background 0.2s;
+        }
+        .voce-stack:last-child { border-bottom: none; }
+        .voce-stack:hover { background: rgba(255,255,255,0.05); }
+        .stack-icona {
+            width: 42px; height: 42px;
+            border-radius: 10px;
+            background: rgba(193,154,64,0.1);
+            border: 1px solid rgba(193,154,64,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .stack-testo { flex: 1; }
+        .stack-testo strong {
+            display: block;
+            font-size: 0.975rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.18rem;
+        }
+        .stack-testo span {
+            font-size: 0.825rem;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.55;
+        }
+        .stack-cifra {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            color: var(--oro-chiaro);
+            white-space: nowrap;
+        }
+        .totale-stack {
+            background: var(--oro);
+            color: var(--inchiostro);
+            padding: 1.4rem 1.75rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .totale-etichetta {
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .totale-etichetta small {
+            display: block;
+            font-size: 0.73rem;
+            font-weight: 500;
+            opacity: 0.65;
+            text-transform: none;
+            letter-spacing: 0;
+            margin-top: 0.15rem;
+        }
+        .totale-cifra {
+            font-family: var(--serif);
+            font-size: 2.1rem;
+            white-space: nowrap;
         }
 
-        /* Scam-Proof Section */
-        .scam-proof {
-            padding: 5rem 2rem;
-            background: linear-gradient(to bottom, #fef2f2, white);
-            border-top: 1px solid #fee2e2;
-        }
-
-        .scam-container {
+        /* PERCHE FIDARSI */
+        .fiducia { padding: 6rem 2rem; background: white; }
+        .fiducia-interno {
             max-width: 1000px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 5rem;
             align-items: center;
         }
-
-        .scam-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.25rem;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-        }
-
-        .scam-content h2 span {
-            color: var(--accent-red);
-            position: relative;
-        }
-
-        .scam-content p {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .scam-list {
+        .fiducia-testo .titolo-sezione { text-align: left; font-size: 2.1rem; }
+        .fiducia-testo .sottotitolo-sezione { text-align: left; margin: 0 0 2rem; }
+        .lista-fiducia {
             list-style: none;
-            space-y: 1rem;
-        }
-
-        .scam-list li {
             display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
+            flex-direction: column;
+            gap: 0.85rem;
         }
-
-        .scam-list li::before {
-            content: '✓';
-            width: 24px;
-            height: 24px;
-            background: var(--accent-green);
-            color: white;
+        .lista-fiducia li {
+            display: flex;
+            gap: 0.85rem;
+            align-items: flex-start;
+            font-size: 0.925rem;
+            font-weight: 500;
+            color: var(--grigio-5);
+            line-height: 1.55;
+        }
+        .segno-spunta {
+            width: 21px; height: 21px;
             border-radius: 50%;
+            background: var(--verde);
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.875rem;
+            font-size: 0.65rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .riquadro-fiducia {
+            background: var(--grigio-1);
+            border-radius: 20px;
+            padding: 2.25rem;
+            border: 1px solid var(--grigio-2);
+            position: relative;
+        }
+        .badge-fiducia {
+            position: absolute;
+            top: -16px; right: 1.5rem;
+            background: var(--navy);
+            color: var(--oro-chiaro);
+            padding: 0.42rem 1.15rem;
+            border-radius: 100px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border: 2px solid var(--oro);
+        }
+        .logo-ente {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--grigio-2);
+        }
+        .logo-ente .scudo { font-size: 2.75rem; display: block; margin-bottom: 0.4rem; }
+        .logo-ente strong {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            display: block;
+            color: var(--navy);
+            margin-bottom: 0.2rem;
+        }
+        .logo-ente small { font-size: 0.77rem; color: var(--grigio-3); }
+        .passi-fiducia { display: flex; flex-direction: column; gap: 0.7rem; }
+        .passo-fiducia {
+            display: flex;
+            gap: 0.7rem;
+            align-items: center;
+            font-size: 0.855rem;
+            color: var(--grigio-5);
+        }
+        .passo-num {
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--oro-chiaro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.72rem;
+            font-weight: 700;
             flex-shrink: 0;
         }
 
-        .scam-visual {
-            background: white;
-            padding: 3rem;
-            border-radius: 24px;
-            box-shadow: var(--shadow-xl);
-            text-align: center;
-            border: 2px solid var(--gray-100);
-            position: relative;
-        }
-
-        .scam-visual::after {
-            content: 'SFE';
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            background: var(--primary-navy);
-            color: white;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 0.875rem;
-            border: 4px solid white;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .shield-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-        }
-
-        /* How It Works */
-        .how-it-works {
-            padding: 5rem 2rem;
-            background: var(--gray-50);
-        }
-
-        .steps-grid {
+        /* COME FUNZIONA */
+        .processo { background: var(--crema); padding: 6rem 2rem; }
+        .passi {
+            max-width: 860px;
+            margin: 3.5rem auto 0;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .step-card {
-            background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: var(--shadow-md);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
             position: relative;
-            transition: transform 0.3s ease;
         }
-
-        .step-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-navy);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.25rem;
-            margin: 0 auto 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .step-card:not(:last-child)::after {
+        .passi::before {
             content: '';
             position: absolute;
-            top: 3rem;
-            right: -2rem;
-            width: 2rem;
-            height: 2px;
-            background: var(--gray-300);
-            display: none;
+            top: 22px;
+            left: calc(16.7% + 0.5rem);
+            right: calc(16.7% + 0.5rem);
+            height: 1px;
+            background: linear-gradient(90deg, var(--grigio-2) 0%, var(--oro) 50%, var(--grigio-2) 100%);
         }
-
-        @media (min-width: 768px) {
-            .step-card:not(:last-child)::after {
-                display: block;
-            }
-        }
-
-        .step-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--dark);
-        }
-
-        .step-card p {
-            color: var(--gray-600);
-            font-size: 0.95rem;
-        }
-
-        /* FAQ Section */
-        .faq {
-            padding: 5rem 2rem;
-            background: white;
-        }
-
-        .faq-grid {
-            max-width: 800px;
-            margin: 3rem auto 0;
+        .passo { text-align: center; padding: 0 1.25rem; }
+        .passo-numero {
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--oro-chiaro);
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            margin: 0 auto 1.4rem;
+            position: relative;
+            z-index: 1;
+            border: 3px solid var(--crema);
+            box-shadow: 0 0 0 1px var(--navy);
         }
+        .passo h3 { font-family: var(--serif); font-size: 1.15rem; margin-bottom: 0.55rem; color: var(--inchiostro); }
+        .passo p { font-size: 0.855rem; color: var(--grigio-4); line-height: 1.65; }
 
-        .faq-item {
-            border: 2px solid var(--gray-100);
+        /* DOMANDE FREQUENTI */
+        .faq { background: white; padding: 6rem 2rem; }
+        .faq-lista {
+            max-width: 740px;
+            margin: 3.5rem auto 0;
+            border: 1px solid var(--grigio-2);
             border-radius: 16px;
             overflow: hidden;
-            transition: all 0.3s ease;
         }
-
-        .faq-item:hover {
-            border-color: var(--gray-200);
-        }
-
-        .faq-question {
+        .faq-voce { border-bottom: 1px solid var(--grigio-2); }
+        .faq-voce:last-child { border-bottom: none; }
+        .faq-domanda {
             width: 100%;
-            padding: 1.5rem;
             background: white;
             border: none;
             text-align: left;
+            font-family: var(--sans);
+            font-size: 0.975rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--dark);
+            color: var(--inchiostro);
+            padding: 1.35rem 1.65rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-family: inherit;
+            gap: 1rem;
+            transition: background 0.15s;
         }
-
-        .faq-question::after {
-            content: '+';
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-question::after {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            background: var(--gray-50);
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-        }
-
-        .faq-answer p {
-            padding: 1.5rem;
-            color: var(--gray-600);
-            line-height: 1.7;
-        }
-
-        /* CTA Section */
-        .final-cta {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, var(--primary-navy) 0%, #1e40af 100%);
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .final-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
-        }
-
-        .final-cta h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-
-        .final-cta p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            position: relative;
-        }
-
-        .cta-button-large {
-            display: inline-block;
-            background: var(--accent-green);
-            color: white;
-            padding: 1.25rem 3rem;
-            border-radius: 9999px;
-            font-size: 1.25rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px -5px rgba(5, 150, 105, 0.4);
-            position: relative;
-            border: 2px solid transparent;
-        }
-
-        .cta-button-large:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 20px 40px -5px rgba(5, 150, 105, 0.5);
-            background: #047857;
-        }
-
-        .guarantee-text {
-            margin-top: 2rem;
-            font-size: 0.875rem;
-            opacity: 0.8;
+        .faq-domanda:hover { background: var(--grigio-1); }
+        .faq-icona {
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            background: var(--grigio-1);
+            border: 1px solid var(--grigio-2);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
+            font-size: 1rem;
+            color: var(--navy-medio);
+            flex-shrink: 0;
+            transition: transform 0.3s, background 0.2s;
         }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
+        .faq-voce.aperta .faq-icona {
+            transform: rotate(45deg);
+            background: var(--navy);
             color: white;
-            padding: 3rem 2rem 2rem;
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--gray-400);
+            border-color: var(--navy);
+        }
+        .faq-risposta {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+            background: var(--grigio-1);
+        }
+        .faq-voce.aperta .faq-risposta { max-height: 400px; }
+        .faq-risposta p {
+            padding: 1.2rem 1.65rem 1.5rem;
+            font-size: 0.9rem;
+            color: var(--grigio-5);
+            line-height: 1.78;
         }
 
-        .footer-links {
-            margin-bottom: 2rem;
+        /* CTA FINALE */
+        .cta-finale {
+            background: var(--navy);
+            padding: 7rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-finale::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 800px 500px at 50% 50%, rgba(193,154,64,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .cta-finale-interno { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
+        .cta-finale .soprattitolo { color: var(--oro); margin-bottom: 1.25rem; }
+        .cta-finale h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4.5vw, 3.1rem);
+            color: white;
+            margin-bottom: 1.25rem;
+            line-height: 1.12;
+        }
+        .cta-finale h2 em { color: var(--oro-chiaro); font-style: italic; }
+        .cta-finale p {
+            color: rgba(255,255,255,0.6);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.75;
+            font-weight: 300;
+        }
+        .pulsante-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--verde);
+            color: white;
+            padding: 1.05rem 2.4rem;
+            border-radius: 100px;
+            font-size: 1.025rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            letter-spacing: 0.01em;
+        }
+        .pulsante-cta:hover {
+            background: var(--verde-chiaro);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(24,102,64,0.32);
+        }
+        .pulsante-cta .freccia { transition: transform 0.2s; }
+        .pulsante-cta:hover .freccia { transform: translateX(4px); }
+        .cta-rassicurazioni {
+            margin-top: 1.75rem;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .cta-rassicurazioni span { display: flex; align-items: center; gap: 0.3rem; }
+
+        /* PIE DI PAGINA */
+        footer {
+            background: var(--inchiostro);
+            color: rgba(255,255,255,0.4);
+            padding: 2.25rem 2rem;
+            text-align: center;
+            font-size: 0.78rem;
+            line-height: 1.8;
+        }
+        .footer-link {
             display: flex;
             justify-content: center;
             gap: 2rem;
             flex-wrap: wrap;
+            margin-bottom: 1.25rem;
         }
+        .footer-link a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+        .footer-link a:hover { color: white; }
 
-        .footer-links a {
-            color: var(--gray-300);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .hero h1 {
-                font-size: 2.25rem;
-            }
-
-            .scam-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .scam-visual::after {
-                display: none;
-            }
-
-            .step-card:not(:last-child)::after {
-                display: none;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero h1 {
-                font-size: 1.875rem;
-            }
-
-            .form-card {
-                padding: 1.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 1.875rem;
-            }
-
-            .objections-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Sticky CTA Mobile */
-        .sticky-cta {
+        /* CTA MOBILE FISSO */
+        .fisso-mobile {
             display: none;
             position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            bottom: 0; left: 0; right: 0;
             background: white;
-            padding: 1rem;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-            z-index: 999;
-            border-top: 1px solid var(--gray-200);
+            padding: 0.9rem 1.25rem;
+            border-top: 1px solid var(--grigio-2);
+            box-shadow: 0 -4px 28px rgba(0,0,0,0.1);
+            z-index: 200;
         }
-
-        @media (max-width: 968px) {
-            .sticky-cta {
-                display: block;
-            }
-
-            .hero {
-                padding-bottom: 6rem;
-            }
-
-            footer {
-                padding-bottom: 6rem;
-            }
-        }
-
-        .sticky-cta button {
+        .fisso-mobile button {
             width: 100%;
-            background: var(--accent-green);
+            background: var(--verde);
             color: white;
             border: none;
-            padding: 1rem;
+            padding: 0.9rem;
             border-radius: 12px;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            font-family: var(--sans);
             cursor: pointer;
         }
 
-        /* Urgency Bar */
-        .urgency-bar {
-            background: linear-gradient(to right, #fef3c7, #fde68a);
-            border-bottom: 1px solid #f59e0b;
-            padding: 0.75rem;
-            text-align: center;
-            font-weight: 600;
-            color: #92400e;
-            font-size: 0.9rem;
-            position: relative;
-            overflow: hidden;
+        /* ANIMAZIONI */
+        @keyframes saliEntra {
+            from { opacity: 0; transform: translateY(22px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
+        .anima { animation: saliEntra 0.65s ease both; }
+        .r1 { animation-delay: 0.05s; }
+        .r2 { animation-delay: 0.18s; }
+        .r3 { animation-delay: 0.32s; }
+        .r4 { animation-delay: 0.46s; }
 
-        .urgency-bar::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            animation: shimmer 2s infinite;
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .hero-interno { grid-template-columns: 1fr; gap: 0; }
+            .modulo-wrapper { max-width: 500px; }
+            .modulo-card { border-radius: 20px; }
+            .hero { padding-bottom: 3rem; }
+            .cifre-interno { grid-template-columns: repeat(2, 1fr); }
+            .fiducia-interno { grid-template-columns: 1fr; gap: 3rem; }
         }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
+        @media (max-width: 768px) {
+            .griglia-problema { grid-template-columns: 1fr; }
+            .passi { grid-template-columns: 1fr; }
+            .passi::before { display: none; }
+            .campi-doppi { grid-template-columns: 1fr; }
+            .voce-stack { flex-wrap: wrap; }
+            .totale-stack { flex-direction: column; gap: 0.5rem; text-align: center; }
+            .fisso-mobile { display: block; }
+            footer { padding-bottom: 5rem; }
+        }
+        @media (max-width: 480px) {
+            .cifra-valore { font-size: 1.85rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Urgency Bar -->
-    <div class="urgency-bar" style="margin-top: 60px;">
-        🔥 Richieste in aumento: oltre 200 italiani hanno verificato il loro diritto questa settimana
+    <div class="barra-top">
+        La sentenza Kovačević (2022) ha confermato: chi ha il <strong>Pre-Settled Status ha gli stessi diritti degli studenti britannici</strong>. Verifica il tuo diritto prima della scadenza.
     </div>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
+    <nav class="nav" id="navbar">
+        <div class="nav-interno">
             <a href="#" class="logo">
-                <div class="logo-flag"></div>
-                <span>Student Finance Italia</span>
+                <div class="bandiera"></div>
+                <span class="logo-nome">Student Finance Italia</span>
             </a>
-            <a href="#form" class="nav-cta">Verifica Ora →</a>
+            <a href="#modulo" class="nav-cta">Verifica Ora →</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+
+    <!-- HERO -->
     <section class="hero">
-        <div class="hero-container">
+        <div class="hero-interno">
             <div class="hero-content">
-                <div class="hero-badge">100% Gratuito e Senza Impegno</div>
-                <h1>
-                    Verifica Gratuita: Hai diritto a <span class="highlight">£40k</span> di finanziamenti universitari UK
-                    <span style="display: block; font-size: 0.8em; margin-top: 0.5rem; color: var(--gray-600); font-family: 'Inter', sans-serif;">(anche senza diploma, anche dopo Brexit)</span>
+                <div class="hero-etichetta anima r1">
+                    🇮🇹 Riservato agli italiani con 3+ anni nel Regno Unito
+                </div>
+                <h1 class="anima r2">
+                    Ogni anno che aspetti,<br>lasci <em>£22.000</em><br>sul tavolo.
                 </h1>
-                <p class="hero-subheadline">
-                    <strong>Nessun costo nascosto.</strong> Non serve la maturità. Non serve pagare di tasca tua. Non devi fare domande complicate. <span style="background: linear-gradient(120deg, transparent 0%, #fef08a 0%, #fef08a 100%, transparent 100%); background-repeat: no-repeat; background-size: 100% 40%; background-position: 0 80%;">Serve solo essere italiani con 3+ anni a Londra.</span>
+                <p class="hero-sottotitolo anima r3">
+                    Il governo britannico finanzia <strong>tasse universitarie, vitto e alloggio</strong> per chi vive nel Regno Unito da almeno tre anni. La maggior parte degli italiani non lo sa — e rinuncia in silenzio a decine di migliaia di sterline che ha già maturato il diritto di ricevere.
                 </p>
-                
-                <div class="trust-indicators">
-                    <div class="trust-item">Verifica 2 minuti</div>
-                    <div class="trust-item">Zero costi nascosti</div>
-                    <div class="trust-item">Supporto in italiano</div>
+                <div class="hero-prova anima r4">
+                    <div class="hero-prova-voce"><div class="pallino"></div>Verifica in 2 minuti</div>
+                    <div class="hero-prova-voce"><div class="pallino"></div>Nessun anticipo richiesto</div>
+                    <div class="hero-prova-voce"><div class="pallino"></div>Rimborso solo oltre £25.000/anno</div>
+                    <div class="hero-prova-voce"><div class="pallino"></div>Assistenza interamente in italiano</div>
                 </div>
             </div>
 
-            <div class="form-card" id="form">
-                <div class="form-header">
-                    <h2>Verifica la tua idoneità</h2>
-                    <p>Compila il form per scoprire se hai diritto ai £40.000</p>
-                </div>
-                
-                <form onsubmit="event.preventDefault(); alert('Grazie! Ti contatteremo entro 24h con la verifica del tuo diritto.');">
-                    <div class="form-group">
-                        <label class="form-label">Nome completo</label>
-                        <input type="text" class="form-input" placeholder="Mario Rossi" required>
+            <div class="modulo-wrapper anima r3" id="modulo">
+                <div class="modulo-card">
+                    <div class="modulo-soprattitolo">
+                        <span>🔒</span> Verifica gratuita · Senza impegno
                     </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-input" placeholder="mario@email.com" required>
+                    <h2>Scopri quanto<br>ti spetta</h2>
+                    <p class="modulo-desc">Quattro domande. Ti diciamo esattamente a quanto hai diritto.</p>
+
+                    <form id="modulo-idoneita">
+                        <div class="campo">
+                            <label>Nome e cognome</label>
+                            <input type="text" placeholder="Mario Rossi" required>
+                        </div>
+                        <div class="campi-doppi">
+                            <div class="campo">
+                                <label>Indirizzo e-mail</label>
+                                <input type="email" placeholder="mario@email.com" required>
+                            </div>
+                            <div class="campo">
+                                <label>Telefono (UK)</label>
+                                <input type="tel" placeholder="07XXX XXXXXX" required>
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label>Da quanti anni vivi nel Regno Unito?</label>
+                            <select required>
+                                <option value="">Seleziona...</option>
+                                <option value="3-5">Da 3 a 5 anni</option>
+                                <option value="5-10">Da 5 a 10 anni</option>
+                                <option value="10+">Più di 10 anni</option>
+                                <option value="under3">Meno di 3 anni</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label>Stato di residenza</label>
+                            <select required>
+                                <option value="">Seleziona...</option>
+                                <option value="settled">Settled Status ✓</option>
+                                <option value="presettled">Pre-Settled Status ✓</option>
+                                <option value="applied">Domanda inviata, in attesa</option>
+                                <option value="none">Non ancora richiesto</option>
+                            </select>
+                        </div>
+                        <div class="consenso">
+                            <input type="checkbox" id="privacy" required>
+                            <label for="privacy">Acconsento al trattamento dei dati per la verifica dell'idoneità, nel rispetto della <a href="#">Informativa sulla Privacy</a>.</label>
+                        </div>
+                        <button type="submit" class="pulsante-invio">
+                            Calcola il mio finanziamento <span class="freccia">→</span>
+                        </button>
+                    </form>
+
+                    <div class="modulo-garanzia">
+                        🔒 Dati protetti · Mai ceduti a terzi · Solo procedure ufficiali GOV.UK
                     </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label">Telefono (UK)</label>
-                        <input type="tel" class="form-input" placeholder="07XXX XXXXXX" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label">Da quanto tempo vivi nel UK?</label>
-                        <select class="form-input form-select" required>
-                            <option value="">Seleziona...</option>
-                            <option value="3-5">3-5 anni</option>
-                            <option value="5-10">5-10 anni</option>
-                            <option value="10+">Più di 10 anni</option>
-                            <option value="less3">Meno di 3 anni</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Hai il Pre-Settled o Settled Status?</label>
-                        <select class="form-input form-select" required>
-                            <option value="">Seleziona...</option>
-                            <option value="presettled">Pre-Settled Status</option>
-                            <option value="settled">Settled Status</option>
-                            <option value="applied">Ho fatto domanda, in attesa</option>
-                            <option value="none">Non ancora</option>
-                        </select>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="privacy" required>
-                        <label for="privacy">Accetto la privacy policy e autorizzo il trattamento dei dati per verificare la mia idoneità ai finanziamenti UK.</label>
-                    </div>
-
-                    <button type="submit" class="submit-btn">
-                        Verifica Gratuita Ora
-                    </button>
-
-                    <div class="form-footer">
-                        <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        I tuoi dati sono protetti e mai condivisi con terzi
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Objections Handling -->
-    <section class="objections">
-        <div class="container">
-            <div class="section-header">
-                <h2>Tutto quello che ti hanno detto di falso sullo studio nel UK</h2>
-                <p>Ecco perché quasi TUTTI gli italiani a Londra hanno diritto a questi fondi, ma non lo sanno</p>
-            </div>
-
-            <div class="objections-grid">
-                <div class="objection-card">
-                    <div class="objection-icon">🎓</div>
-                    <h3>Funziona anche SENZA la maturità</h3>
-                    <p>Entry per <strong>mature students</strong> con esperienza lavorativa. Il tuo CV conta più di un pezzo di carta. Corsi di accesso disponibili per tutti.</p>
-                </div>
-
-                <div class="objection-card">
-                    <div class="objection-icon">💰</div>
-                    <h3>Finanziamento copre TUTTO</h3>
-                    <p>Tasse universitarie <strong>+ vitto + alloggio</strong>. Zero anticipo richiesto. Ricevi il pagamento direttamente sul tuo conto UK.</p>
-                </div>
-
-                <div class="objection-card">
-                    <div class="objection-icon">🇪🇺</div>
-                    <h3>Valido dopo Brexit</h3>
-                    <p>Chi ha <strong>Pre-Settled o Settled Status</strong> ha gli stessi diritti degli studenti inglesi. Non sei un "overseas student".</p>
-                </div>
-
-                <div class="objection-card">
-                    <div class="objection-icon">⏰</div>
-                    <h3>Fattibile con lavoro FULL-TIME</h3>
-                    <p>Opzioni serali e weekend disponibili. Corsi part-time e blended learning. <strong>Non devi mollare il lavoro</strong> per studiare.</p>
-                </div>
-
-                <div class="objection-card">
-                    <div class="objection-icon">🗣️</div>
-                    <h3>Inglese base sufficiente</h3>
-                    <p>Il <strong>foundation year</strong> include supporto linguistico completo. Molti corsi accettano IELTS 5.5 o equivalenti.</p>
-                </div>
-
-                <div class="objection-card">
-                    <div class="objection-icon">📝</div>
-                    <h3>Zero burocrazia</h3>
-                    <p>I nostri partner fanno <strong>tutta l'applicazione per te</strong> in italiano. Ti guidiamo passo dopo passo fino all'approvazione.</p>
-                </div>
-
-                <div class="objection-card">
-                    <div class="objection-icon">🔄</div>
-                    <h3>Impegno annuale</h3>
-                    <p>Decidi ogni anno se continuare. <strong>Nessun contratto pluriennale</strong> vincolante. Flessibilità totale sul tuo percorso.</p>
-                </div>
-
-                <div class="objection-card" style="border-color: var(--accent-green); background: #ecfdf5;">
-                    <div class="objection-icon">✅</div>
-                    <h3>Non è una truffa</h3>
-                    <p><strong>Siamo italiani come te</strong>, non agenzia sospetta. Controlli tutto direttamente con Student Finance England. Trasparenza totale.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Scam Proof Section -->
-    <section class="scam-proof">
-        <div class="scam-container">
-            <div class="scam-content">
-                <h2>Perché fidarsi? <span>Non siamo un'agenzia.</span></h2>
-                <p>Sappiamo che nel mercato UK circolano tante truffe sui "loan schemes". Ecco perché il nostro approccio è diverso:</p>
-                
-                <ul class="scam-list">
-                    <li>Non chiediamo soldi anticipati</li>
-                    <li>Non tocchiamo i tuoi fondi: pagamento diretto SFE → Università → Te</li>
-                    <li>Tutti i documenti sono firmati da te direttamente con il governo UK</li>
-                    <li>Verifica ufficiale tramite portale GOV.UK</li>
-                    <li>Supporto in italiano ma procedure 100% ufficiali inglesi</li>
+
+    <!-- CIFRE -->
+    <div class="cifre">
+        <div class="cifre-interno">
+            <div>
+                <div class="cifra-valore">£<em>9.250</em></div>
+                <div class="cifra-etichetta">Tasse universitarie<br>annuali coperte</div>
+            </div>
+            <div>
+                <div class="cifra-valore">£<em>13.022</em></div>
+                <div class="cifra-etichetta">Contributo annuo<br>per vitto e alloggio</div>
+            </div>
+            <div>
+                <div class="cifra-valore"><em>3</em> anni</div>
+                <div class="cifra-etichetta">Durata media<br>del finanziamento</div>
+            </div>
+            <div>
+                <div class="cifra-valore">£<em>0</em></div>
+                <div class="cifra-etichetta">Da versare<br>prima di iniziare</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- IL PROBLEMA -->
+    <section class="problema">
+        <div style="max-width:1100px;margin:0 auto;">
+            <div class="testo-centro">
+                <span class="soprattitolo">Il problema vero</span>
+                <h2 class="titolo-sezione">Hai costruito una vita qui.<br>Stai però <em>perdendo</em> quello che ti spetta.</h2>
+                <p class="sottotitolo-sezione">
+                    Non è colpa tua. Il sistema è pensato per chi conosce già l'inglese burocratico.
+                    Queste sono le obiezioni che sentiamo ogni giorno — e la realtà dietro ciascuna di esse.
+                </p>
+            </div>
+
+            <div class="griglia-problema">
+                <div class="voce-problema" data-icona="🎓">
+                    <h3>"Non ho la maturità italiana"</h3>
+                    <p>Le università britanniche prevedono percorsi Foundation e Access Year appositamente per chi non ha un diploma secondario. L'esperienza lavorativa vale quanto un titolo di studio.</p>
+                </div>
+                <div class="voce-problema risolto" data-icona="✅">
+                    <div class="badge-risolto">Chiarito</div>
+                    <h3>I "Mature Students" non hanno bisogno del diploma</h3>
+                    <p>Con almeno tre anni di esperienza professionale sei automaticamente un "mature student". La maggior parte dei corsi non richiede alcun diploma secondario.</p>
+                </div>
+                <div class="voce-problema" data-icona="🇪🇺">
+                    <h3>"Con la Brexit ho perso tutti i diritti"</h3>
+                    <p>È la convinzione più diffusa — e la più costosa. Chi risiedeva nel Regno Unito prima del 31 dicembre 2020 ha conservato gli stessi diritti degli studenti britannici.</p>
+                </div>
+                <div class="voce-problema risolto" data-icona="✅">
+                    <div class="badge-risolto">Chiarito</div>
+                    <h3>Pre-Settled Status: stessi diritti degli studenti britannici</h3>
+                    <p>La sentenza Kovačević (2022) lo ha confermato: il Pre-Settled Status garantisce l'accesso ai finanziamenti di Student Finance England alle stesse condizioni dei cittadini britannici.</p>
+                </div>
+                <div class="voce-problema" data-icona="⏰">
+                    <h3>"Non riesco a conciliarlo con il lavoro"</h3>
+                    <p>Lavorare a tempo pieno e seguire un percorso universitario sembra impossibile. È il timore più comune tra gli italiani che incontriamo.</p>
+                </div>
+                <div class="voce-problema risolto" data-icona="✅">
+                    <div class="badge-risolto">Chiarito</div>
+                    <h3>Corsi serali, nel fine settimana e in modalità mista</h3>
+                    <p>Il Maintenance Loan copre le spese quotidiane, alleggerendo la pressione economica. Molti dei nostri assistiti studiano la sera senza rinunciare al proprio lavoro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PACCHETTO VALORE -->
+    <section class="pacchetto">
+        <div class="pacchetto-interno">
+            <div class="testo-centro" style="margin-bottom:3rem;">
+                <span class="soprattitolo">Il tuo pacchetto completo</span>
+                <h2 class="titolo-sezione chiaro">Tutto quello che ricevi.<br>Senza anticipare nulla.</h2>
+                <p class="sottotitolo-sezione chiaro">
+                    Non si tratta di un corso né di una consulenza a pagamento. È il finanziamento che hai già il diritto di ricevere.
+                </p>
+            </div>
+
+            <div class="voci-stack">
+                <div class="voce-stack">
+                    <div class="stack-icona">🏛️</div>
+                    <div class="stack-testo">
+                        <strong>Tuition Fee Loan — Tasse universitarie</strong>
+                        <span>Copre il 100% delle rette. Viene versato direttamente all'università, senza mai transitare nelle tue mani.</span>
+                    </div>
+                    <div class="stack-cifra">£9.250 / anno</div>
+                </div>
+                <div class="voce-stack">
+                    <div class="stack-icona">🏠</div>
+                    <div class="stack-testo">
+                        <strong>Maintenance Loan — Vitto e alloggio</strong>
+                        <span>Accreditato direttamente sul tuo conto bancario in tre rate annuali. Lo gestisci tu, senza vincoli di utilizzo.</span>
+                    </div>
+                    <div class="stack-cifra">fino a £13.022 / anno</div>
+                </div>
+                <div class="voce-stack">
+                    <div class="stack-icona">🤝</div>
+                    <div class="stack-testo">
+                        <strong>Assistenza completa alla domanda</strong>
+                        <span>I nostri consulenti gestiscono tutta la documentazione per te, in italiano. Nessun modulo in inglese da compilare da solo.</span>
+                    </div>
+                    <div class="stack-cifra">Incluso</div>
+                </div>
+                <div class="voce-stack">
+                    <div class="stack-icona">📋</div>
+                    <div class="stack-testo">
+                        <strong>Orientamento personalizzato al corso</strong>
+                        <span>Ti aiutiamo a scegliere il percorso più adatto al tuo profilo, ai tuoi obiettivi e alla disponibilità di tempo.</span>
+                    </div>
+                    <div class="stack-cifra">Incluso</div>
+                </div>
+                <div class="voce-stack">
+                    <div class="stack-icona">🛡️</div>
+                    <div class="stack-testo">
+                        <strong>Rimborso protetto: paghi solo se guadagni</strong>
+                        <span>Sotto i £25.000 annui non rimborsi nulla. Il debito residuo si cancella automaticamente dopo trent'anni.</span>
+                    </div>
+                    <div class="stack-cifra">Incluso</div>
+                </div>
+            </div>
+
+            <div class="totale-stack">
+                <div class="totale-etichetta">
+                    Valore complessivo su tre anni
+                    <small>Tasse + mantenimento, stima per un corso triennale a Londra</small>
+                </div>
+                <div class="totale-cifra">fino a £66.816</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PERCHE FIDARSI -->
+    <section class="fiducia">
+        <div class="fiducia-interno">
+            <div class="fiducia-testo">
+                <span class="soprattitolo">Trasparenza totale</span>
+                <h2 class="titolo-sezione">Non siamo un'agenzia.<br>Non tocchiamo il tuo denaro.</h2>
+                <p class="sottotitolo-sezione">
+                    Sappiamo che nel mercato britannico circolano schemi poco chiari. Ecco perché il nostro approccio è diverso.
+                </p>
+                <ul class="lista-fiducia">
+                    <li>
+                        <div class="segno-spunta">✓</div>
+                        Nessun pagamento anticipato di alcun tipo
+                    </li>
+                    <li>
+                        <div class="segno-spunta">✓</div>
+                        Il denaro segue questo percorso: Student Finance England → Università → Tu. Noi non lo tocchiamo mai.
+                    </li>
+                    <li>
+                        <div class="segno-spunta">✓</div>
+                        Tutti i documenti sono firmati da te direttamente con il governo britannico
+                    </li>
+                    <li>
+                        <div class="segno-spunta">✓</div>
+                        Verifica ufficiale attraverso il portale GOV.UK
+                    </li>
+                    <li>
+                        <div class="segno-spunta">✓</div>
+                        Assistenza in italiano, procedure al 100% britanniche e ufficiali
+                    </li>
                 </ul>
             </div>
-            
-            <div class="scam-visual">
-                <div class="shield-icon">🛡️</div>
-                <h3>Verifica Ufficiale</h3>
-                <p style="margin-top: 1rem; color: var(--gray-600);">Tutte le pratiche passano attraverso il sistema ufficiale</p>
-                <div style="margin-top: 2rem; padding: 1rem; background: var(--gray-50); border-radius: 12px; font-size: 0.9rem;">
-                    <strong>Student Finance England</strong><br>
-                    <span style="color: var(--gray-500);">Governo Britannico</span>
+
+            <div class="riquadro-fiducia">
+                <div class="badge-fiducia">Ente Ufficiale UK</div>
+                <div class="logo-ente">
+                    <span class="scudo">🛡️</span>
+                    <strong>Student Finance England</strong>
+                    <small>Governo del Regno Unito · GOV.UK</small>
+                </div>
+                <div class="passi-fiducia">
+                    <div class="passo-fiducia">
+                        <div class="passo-num">1</div>
+                        Domanda inviata da te direttamente a Student Finance England
+                    </div>
+                    <div class="passo-fiducia">
+                        <div class="passo-num">2</div>
+                        Fondi accreditati da SFE all'università
+                    </div>
+                    <div class="passo-fiducia">
+                        <div class="passo-num">3</div>
+                        Maintenance Loan accreditato sul tuo conto corrente
+                    </div>
+                    <div class="passo-fiducia">
+                        <div class="passo-num">4</div>
+                        Rimborso solo quando guadagni oltre £25.000 annui
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>Come funziona in 3 passaggi</h2>
-                <p>Dalla verifica al primo pagamento in meno di 30 giorni</p>
+
+    <!-- COME FUNZIONA -->
+    <section class="processo">
+        <div style="max-width:1100px;margin:0 auto;">
+            <div class="testo-centro">
+                <span class="soprattitolo">Come funziona</span>
+                <h2 class="titolo-sezione">Dalla verifica al primo accredito<br>in meno di trenta giorni</h2>
+                <p class="sottotitolo-sezione">Tre passaggi. Li gestiamo quasi interamente noi.</p>
             </div>
 
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Verifica Gratuita</h3>
-                    <p>Compili il form qui sopra. Controlliamo la tua idoneità basandoci sui tuoi anni nel UK e sullo status di residenza.</p>
+            <div class="passi">
+                <div class="passo">
+                    <div class="passo-numero">1</div>
+                    <h3>Verifica gratuita</h3>
+                    <p>Compili il modulo qui sopra. Controlliamo la tua idoneità in base agli anni di residenza e al tuo stato di soggiorno.</p>
                 </div>
-
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>Consulenza Personalizzata</h3>
-                    <p>Un consulente italiano ti chiama (senza impegno) per spiegarti le opzioni di corso e il montante esatto a cui hai diritto.</p>
+                <div class="passo">
+                    <div class="passo-numero">2</div>
+                    <h3>Consulenza in italiano</h3>
+                    <p>Un nostro consulente ti chiama — senza alcun impegno — per illustrarti le opzioni di corso e l'importo esatto a cui hai diritto.</p>
                 </div>
-
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Applichiamo Insieme</h3>
-                    <p>Ti guidiamo nella domanda ufficiale a Student Finance England. I primi fondi arrivano sul tuo conto entro 3-4 settimane.</p>
+                <div class="passo">
+                    <div class="passo-numero">3</div>
+                    <h3>La domanda si fa insieme</h3>
+                    <p>Ti guidiamo passo dopo passo nella richiesta ufficiale a Student Finance England. I primi fondi arrivano entro tre o quattro settimane.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
+
+    <!-- DOMANDE FREQUENTI -->
     <section class="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2>Domande frequenti</h2>
-                <p>Tutto quello che devi sapere prima di iniziare</p>
+        <div style="max-width:1100px;margin:0 auto;">
+            <div class="testo-centro">
+                <span class="soprattitolo">Domande frequenti</span>
+                <h2 class="titolo-sezione">Quello che ci chiedono<br>più spesso</h2>
+                <p class="sottotitolo-sezione">Risposte dirette, senza giri di parole.</p>
             </div>
 
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <button class="faq-question">Devo restituire i soldi se non trovo lavoro dopo?</button>
-                    <div class="faq-answer">
-                        <p>No, il sistema inglese funziona così: inizi a ripagare solo quando guadagni oltre £25.000 all'anno. Se il tuo stipendio è sotto questa soglia, non paghi nulla. Dopo 30 anni il debito viene cancellato.</p>
+            <div class="faq-lista">
+                <div class="faq-voce">
+                    <button class="faq-domanda">
+                        Devo restituire tutto anche se non trovo lavoro dopo la laurea?
+                        <span class="faq-icona">+</span>
+                    </button>
+                    <div class="faq-risposta">
+                        <p>No. Il rimborso scatta soltanto quando guadagni più di £25.000 annui. Sotto questa soglia non versi un centesimo. Se dopo trent'anni esiste ancora un debito residuo, viene cancellato automaticamente dallo Stato britannico.</p>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Cosa succede se ho solo il Pre-Settled Status?</button>
-                    <div class="faq-answer">
-                        <p>Il Pre-Settled Status (stato pre-insediato) ti dà gli stessi diritti del Settled Status per quanto riguarda i finanziamenti universitari. L'importante è aver vissuto nel UK per almeno 3 anni prima dell'inizio del corso.</p>
+                <div class="faq-voce">
+                    <button class="faq-domanda">
+                        Vale anche con il Pre-Settled Status?
+                        <span class="faq-icona">+</span>
+                    </button>
+                    <div class="faq-risposta">
+                        <p>Sì. In seguito alla sentenza Kovačević (2022), il Pre-Settled Status conferisce gli stessi diritti del Settled Status per quanto riguarda i finanziamenti universitari. L'unico requisito aggiuntivo è aver vissuto nel Regno Unito per almeno tre anni prima dell'inizio del corso.</p>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Posso lavorare full-time mentre studio?</button>
-                    <div class="faq-answer">
-                        <p>Assolutamente sì. Esistono corsi part-time, serali e weekend. Inoltre, con il Maintenance Loan ricevi abbastanza per coprire le spese, quindi puoi anche ridurre le ore di lavoro se vuoi concentrarti sugli studi.</p>
+                <div class="faq-voce">
+                    <button class="faq-domanda">
+                        Posso continuare a lavorare mentre studio?
+                        <span class="faq-icona">+</span>
+                    </button>
+                    <div class="faq-risposta">
+                        <p>Sì, senza problemi. Esistono corsi part-time, serali e nel fine settimana. Il Maintenance Loan ti aiuta a coprire le spese quotidiane, quindi puoi anche ridurre gradualmente le ore di lavoro man mano che ti stabilizzi nel percorso di studi.</p>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Quali corsi posso fare?</button>
-                    <div class="faq-answer">
-                        <p>Quasi tutti i corsi undergraduate (prima laurea) e alcuni postgraduate (master) sono finanziabili. Include: Business, IT, Nursing, Ingegneria, Psicologia, e molti altri. Escludiamo solo i corsi privati non accreditati.</p>
+                <div class="faq-voce">
+                    <button class="faq-domanda">
+                        Quali corsi sono finanziabili?
+                        <span class="faq-icona">+</span>
+                    </button>
+                    <div class="faq-risposta">
+                        <p>Quasi tutti i corsi di primo livello (undergraduate) e molti master (postgraduate) sono finanziabili: Business, Informatica, Infermieristica, Ingegneria, Psicologia e molti altri. Sono esclusi i corsi privati privi di accreditamento da parte del governo britannico.</p>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Devo pagare tasse in Italia su questi fondi?</button>
-                    <div class="faq-answer">
-                        <p>No, il Maintenance Loan e il Tuition Fee Loan non sono reddito tassabile. Sono fondi a scopo di studio erogati dal governo britannico e non vanno dichiarati in Italia come reddito.</p>
+                <div class="faq-voce">
+                    <button class="faq-domanda">
+                        Questi fondi vanno dichiarati al fisco italiano?
+                        <span class="faq-icona">+</span>
+                    </button>
+                    <div class="faq-risposta">
+                        <p>No. Il Maintenance Loan e il Tuition Fee Loan non sono reddito imponibile. Si tratta di prestiti erogati a scopo di studio dal governo britannico e non rientrano nelle categorie reddituali soggette a dichiarazione fiscale in Italia.</p>
+                    </div>
+                </div>
+                <div class="faq-voce">
+                    <button class="faq-domanda">
+                        Quanto costa il vostro servizio?
+                        <span class="faq-icona">+</span>
+                    </button>
+                    <div class="faq-risposta">
+                        <p>La verifica iniziale è completamente gratuita. Se decidi di procedere, il nostro compenso viene concordato in modo chiaro e trasparente prima di qualsiasi impegno da parte tua. Non esistono costi nascosti né sorprese.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <h2>Non lasciare che £40.000 vadano persi</h2>
-        <p>Ogni anno migliaia di italiani a Londra rinunciano a questi diritti semplicemente perché non sanno di averli. Verifica subito la tua idoneità, gratis e senza impegno.</p>
-        <a href="#form" class="cta-button-large">Verifica se hai diritto →</a>
-        <div class="guarantee-text">
-            <span>🔒</span> Verifica gratuita - Nessun costo nascosto - Annullabile in qualsiasi momento
+
+    <!-- CTA FINALE -->
+    <section class="cta-finale">
+        <div class="cta-finale-interno">
+            <span class="soprattitolo">L'ultimo passo</span>
+            <h2>Non lasciare che <em>£66.000</em><br>vadano persi</h2>
+            <p>
+                Ogni anno migliaia di italiani a Londra rinunciano a questi finanziamenti semplicemente perché non sanno di averne diritto. La verifica è gratuita, richiede due minuti e non comporta nessun impegno.
+            </p>
+            <a href="#modulo" class="pulsante-cta">
+                Verifica se ne hai diritto <span class="freccia">→</span>
+            </a>
+            <div class="cta-rassicurazioni">
+                <span>🔒 Verifica gratuita</span>
+                <span>· Nessun costo nascosto</span>
+                <span>· Puoi rinunciare in qualsiasi momento</span>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+
+    <!-- PIE DI PAGINA -->
     <footer>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a>
+        <div class="footer-link">
+            <a href="#">Informativa sulla Privacy</a>
             <a href="#">Termini di Servizio</a>
             <a href="#">Contattaci</a>
-            <a href="#">Student Finance England Ufficiale</a>
+            <a href="#">Sito ufficiale Student Finance England</a>
         </div>
         <p>© 2024 Student Finance Italia. Tutti i diritti riservati.<br>
-        <small>Questo sito non è affiliato al governo britannico, ma fornisce assistenza gratuita agli italiani residenti nel UK per accedere ai fondi pubblici ufficiali.</small></p>
+        <small>Questo sito non è affiliato al governo britannico. Forniamo assistenza gratuita agli italiani residenti nel Regno Unito per accedere ai fondi pubblici ufficiali erogati da Student Finance England.</small></p>
     </footer>
 
-    <!-- Sticky Mobile CTA -->
-    <div class="sticky-cta">
-        <button onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'})">
-            Verifica Gratis Ora →
+    <!-- CTA MOBILE FISSO -->
+    <div class="fisso-mobile">
+        <button onclick="document.getElementById('modulo').scrollIntoView({behavior:'smooth'})">
+            Verifica Gratuitamente →
         </button>
     </div>
 
+
     <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                const isActive = faqItem.classList.contains('active');
-                
-                // Close all
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-                
-                // Open clicked if wasn't active
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                }
+        // Accordion FAQ
+        document.querySelectorAll('.faq-domanda').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const voce = btn.parentElement;
+                const eraAperta = voce.classList.contains('aperta');
+                document.querySelectorAll('.faq-voce').forEach(v => v.classList.remove('aperta'));
+                if (!eraAperta) voce.classList.add('aperta');
             });
         });
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Navbar scroll effect
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            const nav = document.querySelector('.nav');
-            if (window.scrollY > 50) {
-                nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-            } else {
-                nav.style.boxShadow = 'none';
-            }
+            navbar.classList.toggle('con-ombra', window.scrollY > 40);
+        });
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission feedback
+        document.getElementById('modulo-idoneita').addEventListener('submit', e => {
+            e.preventDefault();
+            const btn = e.target.querySelector('.pulsante-invio');
+            btn.innerHTML = 'Richiesta inviata ✓';
+            btn.style.background = '#186640';
+            btn.disabled = true;
         });
     </script>
 </body>
